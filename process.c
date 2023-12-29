@@ -24,6 +24,7 @@ int processInput(char *input) {
             exit(0);
         }
 
+	extern char **environ;
         if (access(input, X_OK) == 0 && execve(input, argsList, environ) == -1) {
             perror("execve");
             free(input);

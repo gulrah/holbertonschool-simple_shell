@@ -29,9 +29,10 @@ int handle_input(char *input_str) {
             exit(EXIT_SUCCESS);
         }
 
-        char *path;
+        char *path = NULL;
+	char *path_section = NULL;
 	path = getenv("PATH");
-        char *path_section;
+
 
         if (path == NULL) {
             fprintf(stderr, "./hsh: 1: %s: not found\n", arguments[0]);
