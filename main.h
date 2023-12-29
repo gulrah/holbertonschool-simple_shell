@@ -14,4 +14,4 @@ void tokenize_input(char *input_str, char **arg_list);
 int handle_input(char *input_str);
 int shell_loop(void);
 
-#endif // MAIN_H
+#endif /* MAIN_H */
