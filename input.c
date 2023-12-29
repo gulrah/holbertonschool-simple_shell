@@ -29,7 +29,8 @@ int handle_input(char *input_str) {
             exit(EXIT_SUCCESS);
         }
 
-        char *path = getenv("PATH");
+        char *path;
+	path = getenv("PATH");
         char *path_section;
 
         if (path == NULL) {

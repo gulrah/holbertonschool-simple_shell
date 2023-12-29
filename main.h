@@ -8,7 +8,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
-
+int processInput(char *input);
 char *get_user_input(void);
 void tokenize_input(char *input_str, char **arg_list);
 int handle_input(char *input_str);

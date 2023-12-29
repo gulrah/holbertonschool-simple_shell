@@ -20,7 +20,8 @@ int shell_loop(void) {
             exit(0);
         }
 
-        int status = handle_input(input);
+        int status;
+	status = handle_input(input);
 
         if (status == 2 && pipe_status) {
             exit(2);
