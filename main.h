@@ -1,5 +1,5 @@
-#ifndef _MAIN_H_
-#define _MAIN_H_
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -8,14 +8,10 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
-#define BUFFER_SIZE 1024
 
+char *get_user_input(void);
+void tokenize_input(char *input_str, char **arg_list);
+int handle_input(char *input_str);
+int shell_loop(void);
 
-void display_prompt(void);
-char *read_command(void);
-void execute_command(char *command);
-void handle_exit(void);
-void handle_env(void);
-void handle_error(char *program_name, char *error_message);
-
-#endif /* _MAIN_H_ */
+#endif // MAIN_H
