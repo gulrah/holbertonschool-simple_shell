@@ -7,7 +7,8 @@
  * Return: Always returns 0 upon successful completion.
  */
 
-int shell_loop(void) {
+int shell_loop(void)
+{
 char *line;
 char **args;
 int status;
