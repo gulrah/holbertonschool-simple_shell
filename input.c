@@ -36,6 +36,7 @@ int handle_input(char *input_str) {
 
         char *path = NULL;
 	char *path_section = NULL;
+	
 	path = getenv("PATH");
 
 
