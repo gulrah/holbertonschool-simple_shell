@@ -31,7 +31,7 @@ while (token != NULL)
 {
 tokens[position] = token;
 position++;
-if(position >= bufsize)
+if (position >= bufsize)
 {
 bufsize += 64;
 tokens = realloc(tokens, bufsize *sizeof(char *));
