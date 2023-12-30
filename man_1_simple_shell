@@ -1,1 +1,21 @@
-Burda sizin manual ola bilərdi!!
+.SH NAME
+hsh \- simple shell for executing commands
+
+.SH SYNOPSIS
+.B hsh
+
+.SH DESCRIPTION
+.B hsh
+is a simple shell program designed for reading user commands and executing them.
+
+.SH FUNCTIONS
+
+.SH RETURN VALUE
+The functions return the exit status of the executed command or -1 if an error occurs.
+
+.SH AUTHOR
+Gulnar Rahimli and Fuad Mammadov wrote this.
+
+.SH COPYRIGHT
+This is free software: you are free to modify and redistribute it. 
+
