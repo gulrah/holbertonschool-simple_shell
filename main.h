@@ -12,6 +12,5 @@ int shell_loop(void);
 char *shell_read_line(void);
 char **shell_split_line(char *line);
 int shell_execute(char **args);
-int handle_input(char *input_str);
 
 #endif /* MAIN_H */
