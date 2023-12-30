@@ -23,7 +23,7 @@ Gets user input from the standard input.
 Tokenizes the input string into a list of arguments.
 
 .IP \fBhandle_input(input_str)\fR
-Handles the input string, performs parsing, and executes the command.
+Handles the input string, performs parsing and executes the command.
 
 .IP \fBshell_loop()\fR
 Enters the main loop for the shell, continuously accepting and processing user commands.
