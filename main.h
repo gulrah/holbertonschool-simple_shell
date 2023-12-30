@@ -7,7 +7,6 @@
 #include <unistd.h>
 #include <sys/wait.h>
 
-
 int shell_loop(void);
 char *shell_read_line(void);
 char **shell_split_line(char *line);
