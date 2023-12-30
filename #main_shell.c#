@@ -12,9 +12,9 @@ int shell_loop(void)
 char *line;
 char **args;
 int status;
-
    
-do {
+do
+{
 printf(":) ");
 line = shell_read_line();
 args = shell_split_line(line);
@@ -35,6 +35,7 @@ return 0;
  * Return: Always returns the value returned by shell_loop(), which is 0.
  */
 
-int main(void) {
-return shell_loop();
+int main(void)
+{
+  return (shell_loop();
 }
