@@ -11,7 +11,22 @@ is a simple shell program designed for reading user commands and executing them.
 .SH OPTION
 A simple command comprises optional variable assignments, followed by blank-separated words and redirections. It is terminated by a control operator. The first word specifies the command, passed as argument zero, with the remaining words passed as arguments to the invoked command.
 If a command is terminated by the control operator &, the shell executes the command in the background in a subshell. The shell does not wait for the command to finish, and the return status is 0. Commands separated by a ; are executed sequentially, with the shell waiting for each command to terminate in turn. The return status is the exit status of the last executed command. AND and OR lists are executed with left associativity.
+
 .SH FUNCTIONS
+.IP \fBprocessInput(input)\fR
+Processes the user input and executes the corresponding command.
+
+.IP \fBget_user_input()\fR
+Gets user input from the standard input.
+
+.IP \fBtokenize_input(input_str, arg_list)\fR
+Tokenizes the input string into a list of arguments.
+
+.IP \fBhandle_input(input_str)\fR
+Handles the input string, performs parsing, and executes the command.
+
+.IP \fBshell_loop()\fR
+Enters the main loop for the shell, continuously accepting and processing user commands.
 
 .SH RETURN VALUE
 The return value of a simple command is its exit status or -1 if an error occurs.
