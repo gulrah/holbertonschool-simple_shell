@@ -1,4 +1,17 @@
 #include "main.h"
+
+/**
+ * shell_execute - Execute a command given its arguments.
+ *
+ * This function takes an array of strings (command and its arguments) and
+ * executes the command. If the command is "exit", the program exits.
+ *
+ * @args: An array of strings where the first element is the command and
+ *        subsequent elements are arguments.
+ *
+ * Return: Always returns 1 to continue the shell loop.
+ */
+
 int shell_execute(char **args)
 {
 
