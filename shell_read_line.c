@@ -12,10 +12,10 @@
 char *shell_read_line(void)
 {
 char *line = NULL;
-size_t bufsize = 0; 
+size_t bufsize = 0;
 printf(":) ");
 getline(&line, &bufsize, stdin);
-return line;
+return (line);
 }
 
 /**
@@ -30,20 +30,19 @@ return line;
  *         0 if the input was NULL.
  */
 
-int handle_input(char *input_str) {
-if (input_str == NULL) {
-return 0; 
+int handle_input(char *input_str)
+{
+if (input_str == NULL)
+{
+return (0);
 }
-
     
 if (strcmp(input_str, "exit\n") == 0) {
-free(input_str); 
-exit(0); 
+free(input_str);
+ exit(0);
 }
 
-
-
-return 1;
+return (1);
 }
 /**
  * free_line - Free memory allocated for a line.
@@ -54,6 +53,7 @@ return 1;
  * @line: Pointer to the line that needs to be freed.
  */
 
-void free_line(char *line) {
+void free_line(char *line)
+{
 free(line);
 }
