@@ -7,7 +7,8 @@
 int handle_input(char *input_str) {
 	int return_status = 0;
 	pid_t child_pid = fork();
-
+	char *path = NULL;
+	char *path_section = NULL;
 	if (child_pid == -1) {
 	perror("fork");
 	free(input_str);
@@ -32,13 +33,8 @@ int handle_input(char *input_str) {
             }
             free(input_str);
             exit(EXIT_SUCCESS);
-        }
-
-        char *path = NULL;
-	char *path_section = NULL;
-	
+        }	
 	path = getenv("PATH");
-
 
         if (path == NULL) {
             fprintf(stderr, "./hsh: 1: %s: not found\n", arguments[0]);
