@@ -15,7 +15,7 @@ int handle_input(char *input_str) {
 	exit(EXIT_FAILURE);
 	} else if (child_pid == 0) {
 	char *arguments[64];
-	extern char **environ;
+	char **environ;
 
 	tokenize_input(input_str, arguments);
 
