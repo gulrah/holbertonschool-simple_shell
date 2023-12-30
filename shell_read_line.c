@@ -36,10 +36,11 @@ if (input_str == NULL)
 {
 return (0);
 }
-    
-if (strcmp(input_str, "exit\n") == 0) {
+
+if (strcmp(input_str, "exit\n") == 0)
+{
 free(input_str);
- exit(0);
+exit(0);
 }
 
 return (1);
