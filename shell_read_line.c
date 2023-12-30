@@ -25,3 +25,6 @@ int handle_input(char *input_str) {
 
     return 1;
 }
+void free_line(char *line) {
+    free(line);
+}
