@@ -24,8 +24,10 @@ exit(0);
 }
 
 pid = fork();
-if (pid == 0) {
-if (execvp(args[0], args) == -1) {
+if (pid == 0)
+{
+if (execvp(args[0], args) == -1)
+{
 perror("shell");
 }
 exit(EXIT_FAILURE);
