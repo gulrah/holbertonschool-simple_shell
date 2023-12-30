@@ -2,6 +2,17 @@
 
 #define TOK_DELIM " \t\r\n"
 
+/**
+ * shell_split_line - Split a string into tokens.
+ *
+ * This function takes a string and splits it into tokens based on the
+ * specified delimiters. The tokens are returned as an array of strings.
+ *
+ * @line: The input string to be split.
+ *
+ * Return: An array of tokens (strings) terminated by a NULL pointer.
+ */
+
 char **shell_split_line(char *line)
 {
     int bufsize = 64;
