@@ -10,7 +10,7 @@ is a simple shell program designed for reading user commands and executing them.
 
 .SH OPTION
 A simple command comprises optional variable assignments, followed by blank-separated words and redirections. It is terminated by a control operator. The first word specifies the command, passed as argument zero, with the remaining words passed as arguments to the invoked command.
-If a command is terminated by the control operator &, the shell executes the command in the background in a subshell. The shell does not wait for the command to finish, and the return status is 0. Commands separated by a ; are executed sequentially, with the shell waiting for each command to terminate in turn. The return status is the exit status of the last executed command. AND and OR lists are executed with left associativity.
+If a command is terminated by the control operator &, the shell executes the command in the line. Commands separated by a ; are executed sequentially, with the shell waiting for each command to terminate in turn. The return status is the exit status of the last executed command. AND and OR lists are executed with left associativity.
 
 .SH FUNCTIONS
 .IP \fBprocessInput(input)\fR
@@ -35,7 +35,7 @@ The return value of a simple command is its exit status or -1 if an error occurs
 Gulnar Rahimli and Fuad Mammadov wrote this.
 
 .SH COPYRIGHT
-This is free software: you are free to modify and redistribute it. 
+You are free to use, modify and redistribute it. 
 
 .SH VERSION
 V1.0.0 December 2023
