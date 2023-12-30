@@ -1,5 +1,14 @@
 #include "main.h"
 
+/**
+ * shell_read_line - Read a line from the standard input.
+ *
+ * This function prompts the user with ":) " and reads a line of input from
+ * the standard input (stdin).
+ *
+ * Return: The line of input read from stdin.
+ */
+
 char *shell_read_line(void)
 {
     char *line = NULL;
