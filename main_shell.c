@@ -18,6 +18,21 @@ int shell_loop(void) {
     return 0; 
 }
 
+#include "main.h"
+
 int main(void) {
-    return shell_loop();
+    if (isatty(STDIN_FILENO)) {
+       return shell_loop();
+    } else {
+        char *line = NULL;
+        size_t len = 0;
+        ssize_t read;
+
+            while ((read = getline(&line, &len, stdin)) != -1) {
+            handle_input(line);
+        }
+
+        free(line);
+        return 0;
+    }
 }
