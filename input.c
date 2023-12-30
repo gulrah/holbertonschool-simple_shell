@@ -1,29 +1,34 @@
 #include "main.h"
-
+/**
+ *handle_input - A function that handles console inputs to analyze
+ *
+ *
+ */
 int handle_input(char *input_str) {
-    int return_status = 0;
-    pid_t child_pid = fork();
+	int return_status = 0;
+	pid_t child_pid = fork();
 
-    if (child_pid == -1) {
-        perror("fork");
-        free(input_str);
-        exit(EXIT_FAILURE);
-    } else if (child_pid == 0) {
-        char *arguments[64];
-        extern char **environ;
+	if (child_pid == -1) {
+	perror("fork");
+	free(input_str);
+	exit(EXIT_FAILURE);
+	} else if (child_pid == 0) {
+	char *arguments[64];
+	extern char **environ;
 
-        tokenize_input(input_str, arguments);
+	tokenize_input(input_str, arguments);
 
-        if (arguments[0] == NULL) {
-            free(input_str);
-            exit(EXIT_SUCCESS);
-        }
+	if (arguments[0] == NULL) {
+		free(input_str);
+		exit(EXIT_SUCCESS);
+	}
 
-        if (strcmp(arguments[0], "env") == 0) {
-            char **environment = environ;
-            while (*environment != NULL) {
-                printf("%s\n", *environment);
-                environment++;
+	if (strcmp(arguments[0], "env") == 0) {
+		char **environment = environ;
+		
+		while (*environment != NULL) {
+		printf("%s\n", *environment);
+		environment++;
             }
             free(input_str);
             exit(EXIT_SUCCESS);
