@@ -3,7 +3,7 @@
 int shell_loop(void) {
 	int pipe_status = !isatty(fileno(stdin));
 	char *input;
-
+	int status = 0;
 	while (1) {
 	if (!pipe_status) {
 		printf("#shell$ ");
@@ -18,11 +18,9 @@ int shell_loop(void) {
 	if (strcmp(input, "exit") == 0) {
 		free(input);
 		exit(0);
+
 	}
-
-	int status = 0;
 	status = handle_input(input);
-
 	if (status == 2 && pipe_status) {
 	exit(2);
 	}
