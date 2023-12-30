@@ -26,7 +26,7 @@ fprintf(stderr, "shell: allocation error\n");
 exit(EXIT_FAILURE);
 }
 
-token = strtok(line, TOK_DELIM);
+token = strtok(line, TOK_DELIM); /* Get the first token */
 while (token != NULL)
 {
 tokens[position] = token;
@@ -42,7 +42,7 @@ exit(EXIT_FAILURE);
 }
 }
 
-token = strtok(NULL, TOK_DELIM);
+token = strtok(NULL, TOK_DELIM); /* Get the next token */
 }
 tokens[position] = NULL;
 return (tokens);

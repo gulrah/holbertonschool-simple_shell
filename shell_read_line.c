@@ -11,8 +11,8 @@
 
 char *shell_read_line(void)
 {
-char *line = NULL;
-size_t bufsize = 0;
+char *line = NULL; /* Pointer to store the line */
+size_t bufsize = 0; /* Buffer size for getline */
 printf(":) ");
 getline(&line, &bufsize, stdin);
 return (line);

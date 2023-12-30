@@ -9,9 +9,10 @@
 
 int shell_loop(void)
 {
-char *line; /* To store the input command line from the user. */
-char **args; /* To store the arguments parsed from the input command line. */
-int status; /* To store the status of the executed command. */
+    char *line;     /* To store the input command line from the user. */
+    char **args;    /* To store the arguments parsed from the input command line. */
+    int status;     /* To store the status of the executed command. */
+
 
 do {
 printf(":) ");

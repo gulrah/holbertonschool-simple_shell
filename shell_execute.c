@@ -15,8 +15,8 @@
 int shell_execute(char **args)
 {
 
-pid_t pid;
-int status;
+pid_t pid; /* Process ID for the child process. */
+int status; /* Process ID for the child process. */
 
 if (args[0] != NULL && strcmp(args[0], "exit") == 0)
 {
