@@ -5,6 +5,7 @@ int shell_loop(void) {
     char **args;
     int status;
 
+    
     do {
         printf(":) ");
         line = shell_read_line();
