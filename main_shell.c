@@ -12,9 +12,8 @@ int shell_loop(void)
 char *line;
 char **args;
 int status;
-   
-do
-{
+
+do {
 printf(":) ");
 line = shell_read_line();
 args = shell_split_line(line);
@@ -24,8 +23,7 @@ free(line);
 free(args);
 }
 while (status);
-
-return 0; 
+return (0);
 }
 
 
@@ -37,5 +35,5 @@ return 0;
 
 int main(void)
 {
-return shell_loop();
+return (shell_loop());
 }
