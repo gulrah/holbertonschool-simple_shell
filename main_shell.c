@@ -21,8 +21,7 @@ status = shell_execute(args);
 
 free(line);
 free(args);
-}
-while (status);
+} while (status);
 return (0);
 }
 
