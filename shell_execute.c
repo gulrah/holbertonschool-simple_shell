@@ -5,6 +5,10 @@ int shell_execute(char **args)
     pid_t pid;
     int status;
 
+    if (args[0] != NULL && strcmp(args[0], "exit") == 0) {
+        exit(0);
+    }
+
     pid = fork();
     if (pid == 0) {
         if (execvp(args[0], args) == -1) {
